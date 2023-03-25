@@ -9,7 +9,7 @@ btn_video = KeyboardButton("/📹ВИДЕО📹")
 
 btn_trash = KeyboardButton("/🚮УДАЛИТЬ🚮")
 
-btn_characteristics = KeyboardButton("/💻ХАРАКТЕРИСТИКИ💻")
+btn_characteristics = KeyboardButton("/🚮УДАЛИТЬ🚮")
 
 btn_restart = KeyboardButton("/♻️Перезагрузить♻️")
 

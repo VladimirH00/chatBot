@@ -9,10 +9,11 @@ from src.interfaces.OSInterface import OSInterface
 
 class WindowsOS(OSInterface):
 
-    def __init__(self, dp, bot, config: Config):
+    def __init__(self, dp, bot, config: Config, keyboard):
         self.__dp = dp
         self.__bot = bot
         self.__application_config = config
+        self.__keyboard = keyboard
 
     async def shutdown(self, message: types.Message):
         await self.__bot.send_message(message.from_user.id, "Выключаю...")
@@ -32,3 +33,12 @@ class WindowsOS(OSInterface):
         path = self.__application_config.get_param('root_dir') \
                + '\\' + self.__application_config.get_param('media_path') + '\screenshot\screenshot.png'
         screenshot.save(path)
+
+    async def disk_area(self, message: types.Message):
+        await self.__bot.send_message(message.from_user.id, "some content", reply_markup=self.__keyboard)
+
+    async def get_temperature(self, message: types.Message):
+        pass
+
+    async def make_photo(self, message: types.Message):
+        pass

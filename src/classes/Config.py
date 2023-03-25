@@ -11,7 +11,7 @@ class Config:
             params = file.readlines()
             for row in params:
                 values = row.split('=')
-                self.__params[values[0]] = values[1]
+                self.__params[values[0].strip()] = values[1].strip()
 
             self.__params['root_dir'] = os.getcwd()
         except BaseException:
